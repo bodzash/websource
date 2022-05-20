@@ -1,2 +1,2 @@
 # WebSource Studio
-Open source game engine for the web and desktop.
+Open source game engine for creating browser and desktop games.
