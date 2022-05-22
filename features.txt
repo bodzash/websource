@@ -1,0 +1,31 @@
+[] Has a premade default Component and function set
+
+[] Can save / load project
+[] Can export as (index.html and index.css and index.js)
+
+[] Entity editor
+[] Hammer editor
+[] Component editor
+
+
+[] Stores every game related stuff in an object named Game
+[] Has a runtime - loader - whatever, this is a seperate function
+
+
+
+components and entitites have their code saved/stored as string
+_logic = function(this.script) <- this will run that script
+OR
+when script is needed to be executed use function(script)
+OR (this actually works)
+
+this.draw = new Function("console.log(this.x)") <- has acces to >this<
+
+or other version
+
+this.draw = new Function(this.script) <- this.script = "c.log(this.x)"
+
+
+ide previewer has different methods of rendering
+well not really
+ide uses entitiy's component logic function 
