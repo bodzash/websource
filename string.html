@@ -1,20 +1,53 @@
 
 
 
+<head>
 
+<title>Compiler</title>
 
+</head>
 
-<textarea class="text"></textarea>
-<br/>
-<button class="download">Download</button>
+<body>
+
+<textarea class="text" cols="110" rows="25"></textarea>
+<div class="wrapper">
+    <button class="download-js">DownloadJS</button>
+    <button class="download-html">DownloadHTML</button>
+</div>
 
 <style>
-
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+    div {width: 91%;height: 5rem; display: flex;align-items: center; justify-content: space-between; flex-direction: row;}
+    button{width: 50%; height: 100%;}
+    textarea {resize: none; padding: 1rem 1rem; font-size: 1.2rem; outline: none;}
 </style>
 
 <script>
-    const downloadButton = document.querySelector(".download")
+    const downloadHTML = document.querySelector(".download-html")
+    const downloadJS = document.querySelector(".download-js")
     const textArea = document.querySelector(".text")
+
+    class Renderer {
+        constructor() {
+            this.x = 34
+        }
+        draw() {
+            console.log("cummies", this.x)
+        }
+    }
+
+
+    let asset = {}
+    asset.player = new Renderer()
+    console.log(asset.player)
+    let assetString = JSON.stringify(asset)
 
     function download(filename, text) {
         var element = document.createElement('a');
@@ -26,5 +59,8 @@
         document.body.removeChild(element);
     }
 
-    downloadButton.addEventListener("click", ()=> download("compiled", textArea.value))
+    downloadHTML.addEventListener("click", ()=> download("compiled.html",textArea.value))
+    downloadJS.addEventListener("click", ()=> download("compiled.js", `let Game = ${assetString}; ${textArea.value}`))
 </script>
+
+</body>
