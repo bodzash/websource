@@ -7,13 +7,13 @@ Open source game engine for creating browser, mobile and desktop games using Jav
 
 ## Editor
 
-  ### Entity Editor
+  ### -Entity Editor
 
-  ### Hammer Editor
+  ### -Hammer Editor
 
-  ### Live Editor
+  ### -Live Editor
 
-  ### Component Editor
+  ### -Component Editor
 
 ## Entity
 
