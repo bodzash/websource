@@ -1,0 +1,36 @@
+gameData = {
+  Resources: { //premade root "folder"
+    Sprites: { //user made "folder"
+      fishIdle: {
+        type: "sprite", //model, entity, sound
+	path: "",
+	subType: "file", //"url"
+	content: //encoded png file	
+      }
+    }		
+  }
+}
+
+
+Player = {
+ id: 302,
+ visible: true,
+ position: {x,y},
+ children: {Sprite, AnimatedSprite},
+ _logic: function() {},
+}
+
+Sprite = {
+ enabled: true,
+ visible: true,
+ position: {x, y},
+ offset: {x,y},
+ parent: Player,
+ _logic: function() {},
+}
+
+//an Entitys frame snippet
+
+Entity._logic()
+
+"codesnippetinstringformat" + ""

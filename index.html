@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>WebSource Editor</title>
+</head>
+<body> <!-- oncontextmenu="return false"-->
+    <div id="container">
+        <div class="upper-wrapper">
+            <div class="left-pane window">
+                <div class="title">Editor Tools</div>
+
+                <div class="btn stretch active">Entity Editor</div>
+                <br>
+                <div class="btn stretch">Hammer Editor</div>
+                <br>
+                <div class="btn stretch">Component Editor</div>
+                <br><br><br>
+                <div class="btn stretch">Run Game</div>
+                <br>
+                <div class="btn stretch disabled">Run Entity</div>
+                <br>
+                <div class="btn stretch">Game properties</div>
+                <br>
+                <div class="btn stretch">IDE settings</div>
+                <br>
+                <div class="stretch">Renderer:</div>
+                <div class="select stretch">2D</div>
+            </div>
+
+            <div class="center-pane">
+                <div class="head-pane window">
+                    <div class="btn max active">Player <div class="btn close">x</div></div>
+                    <div class="btn max">Enemy</div>
+                    <div class="btn max">EnemySpawner</div>
+                </div>
+                <div class="window-pane"></div>
+            </div>
+
+            <div class="right-pane window">
+                <div class="title">Inspector: Component</div>
+
+                <div class="btn centrify stretch">Add Script</div>
+                <div class="btn centrify stretch">Edit Script</div>
+                <div class="btn centrify stretch">Remove Script</div>
+
+                <br>
+                <div class="btn centrify stretch">Add a Component to Entity</div>
+                <br>
+                <div class="text stretch">Select an Entity to edit</div>
+                <div class="text stretch">or</div>
+                <text class="text stretch">Create one</text>
+                <br>
+                <div class="btn max">Create an Entity</div>
+            </div>
+        </div>
+        <div class="lower-wrapper window">
+            <div class="title">Resources / Resources: Sprites / Animation Tool</div>
+        </div>
+        <div class="popup"></div> <!--append pop up windows here-->
+        <!--  <script src="editor.js"></script> -->
+    </div>
+</body>
+</html>
