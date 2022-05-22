@@ -25,6 +25,13 @@ or other version
 
 this.draw = new Function(this.script) <- this.script = "c.log(this.x)"
 
+well actually when we want to run code from an entity we add:
+or
+when we init Entities (when game starts, asset loading) we add:
+
+Entity._logic = new Function(Entity.script) <- kinda sad but gets
+the job done :)
+
 
 ide previewer has different methods of rendering
 well not really
