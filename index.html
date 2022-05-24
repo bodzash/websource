@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>WebSource Editor</title>
+
+    <script src="index.js" defer></script>
 </head>
 <body> <!-- oncontextmenu="return false"-->
     <div id="container">
@@ -33,35 +35,33 @@
 
             <div class="center-pane">
                 <div class="head-pane window">
-                    <div class="btn max active">Player <div class="btn close">x</div></div>
-                    <div class="btn max">Enemy</div>
-                    <div class="btn max">EnemySpawner</div>
+                    <div class="title max" style="height: 100%; margin: 0;">Preview</div>
                 </div>
                 <div class="window-pane"></div>
             </div>
 
             <div class="right-pane window">
-                <div class="title">Inspector: Component</div>
+                <div class="title">Inspector</div>
 
-                <div class="btn centrify stretch">Add Script</div>
-                <div class="btn centrify stretch">Edit Script</div>
-                <div class="btn centrify stretch">Remove Script</div>
+                <div class="btn centrify stretch" data-open-script>Edit Script</div>
 
                 <br>
-                <div class="btn centrify stretch">Add a Component to Entity</div>
+                <div class="btn centrify stretch">Add a Component</div>
                 <br>
                 <div class="text stretch">Select an Entity to edit</div>
                 <div class="text stretch">or</div>
-                <text class="text stretch">Create one</text>
+                <text class="text stretch">Create a new one</text>
                 <br>
-                <div class="btn max">Create an Entity</div>
+                <div class="btn max" data-create-entity>Create an Entity</div>
             </div>
         </div>
-        <div class="lower-wrapper window">
-            <div class="title">Resources / Resources: Sprites / Animation Tool</div>
+        <div class="lower-wrapper window" style="flex-direction: column;">
+            <div class="title" style="margin-bottom: .25rem;">Resources</div>
+            <div class="frame" style="width: 100%; height: 100%;"></div>
         </div>
-        <div class="popup"></div> <!--append pop up windows here-->
-        <!--  <script src="editor.js"></script> -->
+
+        <div class="popup"style="display: none;"></div> <!-- append here -->
+
     </div>
 </body>
 </html>

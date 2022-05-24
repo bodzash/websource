@@ -1,0 +1,44 @@
+//Premade Books, functions, etc...
+let Global = {} //stores user specified shit
+let Input = {}
+let Delta = number //time ellapsed 
+
+
+//Where the assets and code are stored
+//And this is the object that is edited via the IDE
+let Game = {
+	Res: {}
+	Settings: {}
+
+	OR instead have seperate "folders" for each resource
+
+	Sprites: {}
+	Entities: {}
+	Levels: {}
+	Components: {}
+	Settings: {}
+	Inputs: {}
+}
+
+
+//Game Runner & Loader // user cant modify this via IDE
+//maybe all of this is wrapped in a function? idk
+
+declared logical arrays here eg: _entityArray()
+
+settings loading
+
+asset preloading
+
+step down bellow maybe will be just added to the asset preloader
+add functions to entities and components based on their script
+Entity._logic = new Function(Entity.script)
+Component._logic = new Function(Component.script)
+
+level loader loads the first level
+
+gameloop function here
+{
+	inside here are the methods to make things work
+	_entityArra.forEach(entity=> )
+}
