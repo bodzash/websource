@@ -24,8 +24,8 @@ if (idealWidth & 1) idealWidth++
 canvas.width = 320 //idealWidth
 canvas.height = 240
 
-canvas.style.width = "640px" //""+screen.width+"px"
-canvas.style.height = "480px" //""+screen.height+"px"
+canvas.style.width = "1024px" //""+screen.width+"px"
+canvas.style.height = "768px" //""+screen.height+"px"
 
 class Player {
   constructor(x, y) {
@@ -63,10 +63,8 @@ class Player {
     this.hspeed = (InputMap.d - InputMap.a) * this.speed
     this.vspeed = (InputMap.s - InputMap.w) * this.speed
 
-    //if (!collideAndSlide(this, wall1)) {
-      this.x += this.hspeed
-      this.y += this.vspeed
-    //}
+    this.x += this.hspeed
+    this.y += this.vspeed
 
     this.sprite = (InputMap.a || InputMap.d || InputMap.w || InputMap.s) ? sprFishWalk : sprFishIdle
     if (this.sprite !== this.prevSprite) {this.frame = 0; this.prevSprite = this.sprite}
@@ -84,8 +82,8 @@ class Player {
     //this.hitbox.Render()
     this.collider.Render()
 
-    ctx.fillStyle = "red"
-    ctx.fillRect(this.x + 12, this.y + 12, 1, 1)
+    //ctx.fillStyle = "red"
+    //ctx.fillRect(this.x + 12, this.y + 12, 1, 1)
   }
 }
 
@@ -105,8 +103,8 @@ class Wall {
 
     this.collider.Render()
 
-    ctx.fillStyle = "red";
-    ctx.fillRect(this.x, this.y, 1, 1)
+    //ctx.fillStyle = "red";
+    //ctx.fillRect(this.x, this.y, 1, 1)
   }
 }
 
@@ -183,14 +181,14 @@ class BoundingBox {
   }
 
   Render() {
-    ctx.fillStyle = "rgba(0, 0, 255, .5)";
-    ctx.fillRect(Math.round(this.x + this.xo), Math.round(this.y + this.yo), this.w, this.h)
+    //ctx.fillStyle = "rgba(0, 0, 255, .5)";
+    //ctx.fillRect(Math.round(this.x + this.xo), Math.round(this.y + this.yo), this.w, this.h)
 
-    ctx.fillStyle = "red";
-    ctx.fillRect(Math.round(this.x + this.xo), Math.round(this.y + this.yo), 1, 1)
+    //ctx.fillStyle = "red";
+    //ctx.fillRect(Math.round(this.x + this.xo), Math.round(this.y + this.yo), 1, 1)
 
-    ctx.fillStyle = "yellow"
-    ctx.fillRect(Math.round(this.x + this.xo + this.w/2), Math.round(this.y + this.yo + this.h/2), 1, 1)
+    //ctx.fillStyle = "yellow"
+    //ctx.fillRect(Math.round(this.x + this.xo + this.w/2), Math.round(this.y + this.yo + this.h/2), 1, 1)
   }
 }
 
@@ -218,8 +216,8 @@ requestAnimationFrame(gameLoop)
 
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  player.Update()
   wall1.Update()
+	player.Update()
   //wall2.Update()
   requestAnimationFrame(gameLoop)
 }
@@ -283,9 +281,7 @@ function pointDistance(x1, y1, x2, y2) {
 
 function loadSprite(path) {
   let spr = new Image()
-  //spr.src = "Sprites/"+path+".png"
   spr.src = path
-  //spr.maxFrame = mxframe
   return spr
 }
 
@@ -305,13 +301,33 @@ window.addEventListener("keyup", (event)=> {
 })
 `
 
+document.getElementById("btn").onclick = runGameInBrower
+document.getElementById("btn2").onclick = ()=> document.querySelector("iframe").remove()
+
+function runGameInBrower() {
+	const iframe = document.createElement('iframe')
+	iframe.style = "border: none;"
+	iframe.width = 1024
+	iframe.height = 768
+	const html =
+	`<body style="padding: 0; margin: 0; overflow: hidden; box-sizing: border-box;" > 
+			<canvas id="canvas" style="background: rgb(77, 77, 77); image-rendering: pixelated;" oncontextmenu="return false"></canvas>
+			<script>${xd}</script>
+	</body>`
+	iframe.srcdoc = html
+	document.body.appendChild(iframe)
+}
+
+/*
 const iframe = document.createElement('iframe')
-iframe.width = 640
-iframe.height = 480
+iframe.style = "border: none;"
+iframe.width = 1024
+iframe.height = 768
 const html =
-`<body> 
-<canvas id="canvas" style="background: #000; image-rendering: pixelated;"></canvas>
-<script>${xd}</script>
+`<body style="padding: 0; margin: 0; overflow: hidden; box-sizing: border-box;" > 
+    <canvas id="canvas" style="background: rgb(77, 77, 77); image-rendering: pixelated;" oncontextmenu="return false"></canvas>
+    <script>${xd}</script>
 </body>`
 iframe.srcdoc = html
 document.body.appendChild(iframe)
+*/

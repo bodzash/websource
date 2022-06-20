@@ -1,0 +1,15 @@
+:root {
+    --canvasDefault: rgb(77, 77, 77);
+
+    --textDark: rgb(0, 0, 0);
+    --textMed: rgb(152, 152, 152);
+    --textLight: rgb(255, 255, 255);
+
+    --boxDark: rgb(35, 35, 35);
+    --boxMed: rgb(55, 55, 55);
+    --boxLight: rgb(79, 82, 89);
+
+    --outLight: rgb(73, 73, 73);
+    --outDark: rgb(65, 65, 65);
+    --outHigh: rgb(85, 95, 113); 
+}
