@@ -1,1 +1,1 @@
-# WebSource Game SDK
+# WebSource SDK
