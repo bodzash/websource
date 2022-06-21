@@ -1,4 +1,4 @@
-const Assets = {}
+const Project = {}
 const SpriteAssets = {} //PNG ONLY
 const SoundAssets = {} //OGG ONLY
 const ComponentAssets = {}
