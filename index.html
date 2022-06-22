@@ -34,10 +34,10 @@
 			<img src="/Icons/stop.svg" width="32px" height="32px" draggable="false" />
 		</div>
 		<div id="btn" class="icon">
-			<img src="/Icons/preferences.svg" width="32px" height="32px" draggable="false" />
+			<img src="/Icons/settings.svg" width="32px" height="32px" draggable="false" />
 		</div>
 		<div id="btn" class="icon">
-			<img src="/Icons/settings.svg" width="32px" height="32px" draggable="false" />
+			<img src="/Icons/preferences.svg" width="32px" height="32px" draggable="false" />
 		</div>
 
 		<div style="margin: 0 2rem;"></div>
@@ -62,7 +62,11 @@
 		<div id="canvas-pane" class="window">
 			<div class="tab-wrapper">
 				<div class="tab">Player</div>
-				<div class="tab inactive">Wall</div>
+				<div class="tab">Enemy</div>
+				<div class="tab active">Monster</div>
+				<div class="tab">Weapon</div>
+				<div class="tab">Bullet</div>
+				<div class="tab">CreatureParent</div>
 			</div>
 			<div class="wrapper" style="padding-top: .2rem;">
 				<div class="inner" id="iframe"></div>
@@ -71,18 +75,22 @@
 
 		<div id="inspector-pane" class="window">
 			<div class="wrapper">
-				<div class="head">Inspector</div>
+				<div class="head">Inspector > Player[E]</div>
 				<div class="inner">
-					<div class="button">Add Entity</div>
+					<br>
+					<div>Select an Entity to edit</div>
+					<div>- or -</div>
+					<div class="button">Create New Entity</div>
+					<div class="button">Edit Code</div>
+					<div class="button">Add Component</div>
 				</div>
-				<div class="head"></div>
 			</div>
 		</div>
 	</div>
 
 	<div id="bottom-pane"class="window">
 		<div class="wrapper">
-			<div class="head">Assets</div>
+			<div class="head">Asset Manager</div>
 			<div class="inner">
 			</div>
 		</div>
