@@ -16,20 +16,68 @@
 		<div id="btn3" class="nav-button"> S </div>
 		<div id="btn3" class="nav-button"> L </div>
 		<div id="btn3" class="nav-button"> E </div>
+	</div>
 
-		<div id="btn" class="nav-button"> > </div>
-		<div id="btn2" class="nav-button"> || </div>
-		<div id="btn3" class="nav-button"> RE </div>
-	</div>
 	<div id="middle-pane">
-		<div id="tool-pane">
-			<div class="button">Entity Editor</div>
+
+		<div id="tool-pane" class="window">
+			<div class="wrapper">
+				<div class="head">Editors</div>
+				<div class="inner">
+					<div class="button" id="btn">Entity Editor</div>
+					<div class="button">Code Editor</div>
+					<div class="button">Level Editor</div>
+					<div class="button">Component Editor</div>
+				</div>
+			</div>
 		</div>
-		<div id="canvas-pane"></div>
-		<div id="inspector-pane"></div>
+
+		<div id="canvas-pane" class="window">
+			<div class="tab-wrapper">
+				<div class="tab">Player</div>
+				<div class="tab inactive">Wall</div>
+			</div>
+			<div class="wrapper" style="padding-top: .2rem;">
+				<div class="inner" id="iframe"></div>
+			</div>
+		</div>
+
+		<div id="inspector-pane" class="window">
+			<div class="wrapper">
+				<div class="head">Inspector</div>
+				<div class="inner">
+					<div class="button">Add Entity</div>
+				</div>
+				<div class="head"></div>
+			</div>
+		</div>
 	</div>
-	<div id="bottom-pane"></div>
+
+	<div id="bottom-pane"class="window">
+		<div class="wrapper">
+			<div class="head">Inspector</div>
+			<div class="inner">
+			</div>
+		</div>
+	</div>
+
 	<div id="modal-pane"></div>
+
+	<div id="test" style="display: none;" class="window">
+		<div class="tab-wrapper">
+			<div class="tab">Inspector</div>
+			<div class="tab inactive">Importer</div>
+		</div>
+		<div class="wrapper">
+			<div class="head">
+				<div class="icon">+</div>
+				<div class="icon">S</div>
+			</div>
+			<div class="inner">
+				<div class="button">Add Entity</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
 

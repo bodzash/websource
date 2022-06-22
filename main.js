@@ -24,8 +24,8 @@ if (idealWidth & 1) idealWidth++
 canvas.width = 320 //idealWidth
 canvas.height = 240
 
-canvas.style.width = "1024px" //""+screen.width+"px"
-canvas.style.height = "768px" //""+screen.height+"px"
+canvas.style.width = "100%" //""+screen.width+"px"
+canvas.style.height = "100%" //""+screen.height+"px"
 
 class Player {
   constructor(x, y) {
@@ -304,22 +304,25 @@ window.addEventListener("keyup", (event)=> {
 })
 `
 
+const modal = document.querySelector("#modal-pane")
 document.getElementById("btn").onclick = runGameInBrower
 document.getElementById("btn2").onclick = ()=> document.querySelector("iframe").remove()
 
 function runGameInBrower() {
 	const iframe = document.createElement('iframe')
 	iframe.style = "border: none;"
-	iframe.width = 1024
-	iframe.height = 768
+	iframe.width = "100%"
+	iframe.height = "100%"
 	const html =
 	`<body style="padding: 0; margin: 0; overflow: hidden; box-sizing: border-box;" > 
 			<canvas id="canvas" style="background: rgb(77, 77, 77); image-rendering: pixelated;" oncontextmenu="return false"></canvas>
 			<script>${xd}</script>
 	</body>`
+
 	iframe.srcdoc = html
-  document.querySelector("#canvas-pane").append(iframe)
-	//document.body.appendChild(iframe)
+
+  document.querySelector("#iframe").replaceChildren()
+  document.querySelector("#iframe").append(iframe)
 }
 
 /*
