@@ -30,7 +30,7 @@ class EntityStorage extends BaseStorage {
 
 class SpriteStorage extends BaseStorage {
   async uploadSprite(key, event) {
-    //no duplicate names no space, only text and number
+    //no duplicate names no space, only text and number & assets cant start with number
     const file = event.target.files[0]
     const base64 = await convertBase64(file)
     this[key] = base64

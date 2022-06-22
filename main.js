@@ -257,8 +257,11 @@ function collideAndSlide(obj1, obj2) {
   {
     let ang = pointDirection(obj2.x + 8, obj2.y + 8, obj1.x + 12, obj1.y + 12)
 
-    obj1.x += 2 * Math.cos(3.14 / 180 * ang)
-    obj1.y -= 2 * Math.sin(3.14 / 180 * ang)
+    //obj1.x += 2 * Math.cos(3.14 / 180 * ang)
+    //obj1.y -= 2 * Math.sin(3.14 / 180 * ang)
+
+    obj1.x += 1.41 * Math.cos(3.14 / 180 * ang)
+    obj1.y -= 1.41 * Math.sin(3.14 / 180 * ang)
 
     col1.Update(obj1.x, obj1.y)
 
@@ -315,7 +318,8 @@ function runGameInBrower() {
 			<script>${xd}</script>
 	</body>`
 	iframe.srcdoc = html
-	document.body.appendChild(iframe)
+  document.querySelector("#canvas-pane").append(iframe)
+	//document.body.appendChild(iframe)
 }
 
 /*
@@ -330,4 +334,36 @@ const html =
 </body>`
 iframe.srcdoc = html
 document.body.appendChild(iframe)
+*/
+
+// raneming asset should rename the class code as well class Before -> class After
+
+class Diarreha {
+  constructor(x) {
+    this.y = "Woof"
+  }
+}
+
+class Shit {
+  constructor() {
+    this.Bukkake.y = "cat"
+    console.log(this.Bukkake);
+    console.log(this._Components);
+  }
+}
+
+//we turn the ide shit into real stuff
+Shit.prototype._Components = [new Diarreha(32)]
+
+//we make reference to the real stuff
+Shit.prototype.Bukkake = Shit.prototype._Components[0] //<- components will be added like this
+
+new Shit()
+
+/*
+  game loop:
+  For Each Entity in Level Array {
+    Entity's _Update()
+    Entity's _Components Array[0 -> length-1]
+  }
 */

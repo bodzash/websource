@@ -1,0 +1,127 @@
+:root {
+  --canvasDefault: rgb(77, 77, 77);
+
+  --textDark: rgb(0, 0, 0);
+  --textMed: rgb(152, 152, 152);
+  --textLight: rgb(255, 255, 255);
+
+  --boxDark: rgb(35, 35, 35);
+  --boxMed: rgb(55, 55, 55);
+  --boxLight: rgb(79, 82, 89);
+
+  --outLight: rgb(73, 73, 73);
+  --outDark: rgb(65, 65, 65);
+  --outHigh: rgb(85, 95, 113); 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.window-box {
+  background: var(--boxMed);
+  border: 2px solid var(--outHigh);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: var(--boxLight);
+  border: 2px solid var(--outDark);
+  width: 90%;
+  height: 2rem;
+  user-select: none;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--boxDark);
+  border: 2px solid var(--outLight);
+
+  color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  user-select: none;
+}
+
+.title {
+
+}
+
+.body {
+
+}
+
+#top-pane {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--boxMed);
+  width: 100%;
+  height: 2.5rem;
+}
+
+#bottom-pane {
+  background: var(--boxMed);
+  border: 1px solid var(--outDark);
+  width: 100%;
+  height: calc( 100% - 70%);
+}
+
+#middle-pane {
+  display: flex;
+  background: var(--boxMed);
+  border: 1px solid var(--outDark);
+  width: 100%;
+  height: calc( 70% - 2.5rem);
+}
+
+
+#tool-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--boxMed);
+  border: 1px solid var(--outDark);
+  width: 30%;
+  height: 100%;
+}
+
+#inspector-pane {
+  background: var(--boxMed);
+  border: 1px solid var(--outDark);
+  width: 30%;
+  height: 100%;
+}
+
+#canvas-pane {
+  background: var(--canvasDefault);
+  border: 1px solid var(--outHigh);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#modal-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(65, 65, 65, 0.4);
+}
