@@ -9,13 +9,39 @@
 	<script src="main.js" defer></script>
 	<title>(*) Nuclear Clone • WebSource IDE</title>
 </head>
-<body>
+<body> <!-- oncontextmenu="return false" -->
 
 	<div id="top-pane">
-		<div id="btn3" class="nav-button"> N </div>
-		<div id="btn3" class="nav-button"> S </div>
-		<div id="btn3" class="nav-button"> L </div>
-		<div id="btn3" class="nav-button"> E </div>
+		<div id="btn" class="icon">
+			<img src="/Icons/new.svg" width="32px" height="32px" draggable="false" />
+		</div>
+		<div id="btn" class="icon">
+			<img src="/Icons/save.svg" width="32px" height="32px" draggable="false" />
+		</div>
+		<div id="btn" class="icon">
+			<img src="/Icons/load.svg" width="32px" height="32px" draggable="false" />
+		</div>
+		<div id="btn" class="icon">
+			<img src="/Icons/export.svg" width="32px" height="32px" draggable="false" />
+		</div>
+
+		<div style="margin: 0 2rem;"></div>
+
+		<div id="btn-play" class="icon">
+			<img src="/Icons/play.svg" width="32px" height="32px" draggable="false" />
+		</div>
+		<div id="btn-stop" class="icon">
+			<img src="/Icons/stop.svg" width="32px" height="32px" draggable="false" />
+		</div>
+		<div id="btn" class="icon">
+			<img src="/Icons/preferences.svg" width="32px" height="32px" draggable="false" />
+		</div>
+		<div id="btn" class="icon">
+			<img src="/Icons/settings.svg" width="32px" height="32px" draggable="false" />
+		</div>
+
+		<div style="margin: 0 2rem;"></div>
+
 	</div>
 
 	<div id="middle-pane">
@@ -24,10 +50,11 @@
 			<div class="wrapper">
 				<div class="head">Editors</div>
 				<div class="inner">
-					<div class="button" id="btn">Entity Editor</div>
+					<div class="button">Entity Editor</div>
 					<div class="button">Code Editor</div>
 					<div class="button">Level Editor</div>
 					<div class="button">Component Editor</div>
+					<div class="button">Help</div>
 				</div>
 			</div>
 		</div>
@@ -55,7 +82,7 @@
 
 	<div id="bottom-pane"class="window">
 		<div class="wrapper">
-			<div class="head">Inspector</div>
+			<div class="head">Assets</div>
 			<div class="inner">
 			</div>
 		</div>

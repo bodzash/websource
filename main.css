@@ -26,18 +26,24 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
+
+  user-select: none;
 }
 
 #top-pane {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
-  height: 3rem;
+  height: 3.4rem;
 }
 
 #middle-pane {
   display: flex;
 
   width: 100%;
-  height: 70%;
+  height: 60%;
 }
 
 #middle-pane > #tool-pane {
@@ -55,7 +61,7 @@ body {
 
 #bottom-pane {
   width: 100%;
-  height: calc(30% - 3rem);
+  height: calc(40% - 3.4rem);
 }
 
 #modal-pane {
@@ -101,7 +107,6 @@ body {
   border-top: 2px solid var(--windowOutline);
   border-left: 2px solid var(--windowOutline);
   border-right: 2px solid var(--windowOutline);
-  user-select: none;
   cursor: pointer;
 }
 
@@ -126,7 +131,7 @@ body {
   height: 2.5rem;
   width: calc(100% - .4rem);
 
-  user-select: none;
+  text-indent: .2rem;
 }
 
 .window .inner {
@@ -147,19 +152,24 @@ body {
 .inactive {
   color: var(--windowInactice) !important;
   background: var(--windowInner) !important;
-  border: none !important;
+  border-top: 2px solid var(--windowDark) !important;
+  border-left: 2px solid var(--windowDark) !important;
+  border-right: 2px solid var(--windowDark) !important;
 }
 
 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.8rem;
+  height: 2.8rem;
 
-  margin-right: .4rem;
+  margin: 0 .3rem;
 
-  font-size: 2rem !important;
+  color: var(--windowColor);
+  background: var(--windowBack);
+  border: 2px solid var(--windowOutline);
+  font-size: 1.2rem !important;
   cursor: pointer;
 }
 
@@ -174,7 +184,5 @@ body {
 
   border: 2px solid var(--windowOutline);
   background-color: var(--windowBack);
-
-  user-select: none;
   cursor: pointer;
 }

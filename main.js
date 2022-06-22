@@ -305,8 +305,8 @@ window.addEventListener("keyup", (event)=> {
 `
 
 const modal = document.querySelector("#modal-pane")
-document.getElementById("btn").onclick = runGameInBrower
-document.getElementById("btn2").onclick = ()=> document.querySelector("iframe").remove()
+document.getElementById("btn-play").onclick = runGameInBrower
+document.getElementById("btn-stop").onclick = ()=> document.querySelector("iframe")?.remove()
 
 function runGameInBrower() {
 	const iframe = document.createElement('iframe')
@@ -323,6 +323,7 @@ function runGameInBrower() {
 
   document.querySelector("#iframe").replaceChildren()
   document.querySelector("#iframe").append(iframe)
+  document.querySelector("iframe").focus()
 }
 
 /*
