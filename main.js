@@ -132,16 +132,18 @@ const EntityFunctions = `
 `
 
 const GameFragment = `
-let mainArray = [] //set it to equal to the initial level
 
-mainArray.push(new Player())
+let map1 = [new Player(100, 50)]
+console.log(map1)
+
+let mainArray = map1 //set it to equal to the initial level or []
 
 requestAnimationFrame(gameLoop) //<- make it that, this will only run when assets are loaded
 
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  mainArray.forEach(ent=> ent?.Update())
-  mainArray.forEach(ent=> ent?.Render())
+  mainArray.forEach(ent=> ent.Update?.())
+  mainArray.forEach(ent=> ent.Render?.())
   requestAnimationFrame(gameLoop)
 };
 `
@@ -181,8 +183,12 @@ function placeholderEntityAssemler() {
 for(const key in arr) {
   temp +=`
   class ${key} {
-    constructor() {
-      this?.Create()
+    constructor(x, y) {
+      this.x = x || 0
+      this.y = y || 0
+      this.hspeed = 0
+      this.vspeed = 0
+      this.Create?.()
     }
     ${arr[key]}
   }  
@@ -197,10 +203,10 @@ let sprFishWalkHolder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAAYC
 
 let playerplace = `
   Create() {
-    this.x = 20
-    this.y = 20
-    this.hspeed = 0
-    this.vspeed = 0
+    //this.x = 20
+    //this.y = 20
+    //this.hspeed = 0
+    //this.vspeed = 0
     this.health = 10
     this.speed = 1
 
@@ -244,7 +250,7 @@ Game.Sprite.sprFishWalk = sprFishWalkHolder
 Game.Entity.Player = playerplace
 
 
-console.log(Compiler.Compile());
+//console.log(Compiler.Compile());
 
 
 /*
