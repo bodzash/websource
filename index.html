@@ -30,9 +30,9 @@
 		<div id="ico-play" class="icon">
 			<img src="/Icons/play.svg" width="32px" height="32px" draggable="false" />
 		</div>
-		<div id="ico-stop" class="icon">
+		<!--<div id="ico-stop" class="icon">
 			<img src="/Icons/stop.svg" width="32px" height="32px" draggable="false" />
-		</div>
+		</div>-->
 		<div id="ico" class="icon">
 			<img src="/Icons/settings.svg" width="32px" height="32px" draggable="false" />
 		</div>
@@ -124,7 +124,18 @@
 
 	-->
 
-	<div id="modal-pane"></div>
+	<div id="modal-pane">
+		<div class="window" style="width: 90%; height: 90%;">
+			<div class="wrapper">
+				<div class="head">
+					<div id="ico-stop" class="icon">
+						<img src="/Icons/stop.svg" width="32px" height="32px" draggable="false" />
+					</div>
+				</div>
+				<div id="modal" class="inner"></div>
+			</div>
+		</div>
+	</div>
 
 	<div id="test" style="display: none;" class="window">
 		<div class="tab-wrapper">

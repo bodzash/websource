@@ -1,7 +1,7 @@
 export const script = `
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
-
+/*
 let idealWidth = 0
 const idealHeight = 240
 
@@ -15,6 +15,7 @@ canvas.height = 240
 
 canvas.style.width = "100%"
 canvas.style.height = "100%" //when zooming in editor set percentile
+*/
 
 class Player {
   constructor(x, y) {
