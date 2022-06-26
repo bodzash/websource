@@ -84,3 +84,5 @@ class Player {
       ctx.drawImage(this.sprite, 24 * Math.floor(this.frame), 0, 24, 24, Math.round(this.x), Math.round(this.y), 24, 24)
     }
   }
+
+console.log("XASDASDASD")
