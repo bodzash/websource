@@ -30,9 +30,9 @@
 		<div id="ico-play" class="icon">
 			<img src="/Icons/play.svg" width="32px" height="32px" draggable="false" />
 		</div>
-		<!--<div id="ico-stop" class="icon">
+		<div id="ico" class="icon">
 			<img src="/Icons/stop.svg" width="32px" height="32px" draggable="false" />
-		</div>-->
+		</div>
 		<div id="ico" class="icon">
 			<img src="/Icons/settings.svg" width="32px" height="32px" draggable="false" />
 		</div>
@@ -46,71 +46,71 @@
 
 	<div id="bottom-pane">
 
-	<div id="left-pane">
+		<div id="left-pane">
 
-		<div class="window" style="height: 60%;">
-			<div class="wrapper">
-				<div class="head">Editing Tools</div>
-				<div class="inner">
-					<div class="button pushed">Entity Editor</div>
-					<div class="button">Level Editor</div>
-					<div class="button">Component Editor</div>
-					<div class="button">Help</div>
+			<div class="window" style="height: 60%;">
+				<div class="wrapper">
+					<div class="head">Editing Tools</div>
+					<div class="inner">
+						<div class="button pushed">Entity Editor</div>
+						<div class="button">Level Editor</div>
+						<div class="button">Component Editor</div>
+						<div class="button">Help</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="window" style="height: 40%;">
+				<div class="wrapper">
+					<div class="head">Asset Folders</div>
+					<div class="inner">
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="window" style="height: 40%;">
-			<div class="wrapper">
-				<div class="head">Asset Folders</div>
-				<div class="inner">
+		<div id="middle-pane">
+			<div id="canvas-pane">
+				<div class="window">
+					<div class="tab-wrapper">
+						<div class="tab active">Player</div>
+						<div class="tab">Enemy</div>
+						<div class="tab">Monster</div>
+						<div class="tab">Weapon</div>
+						<div class="tab">Bullet</div>
+						<div class="tab">CreatureParent</div>
+					</div>
+					<div class="wrapper"> <!-- style="padding-top: .2rem;" -->
+						<div class="head">+ 100% -</div>
+						<div class="inner" id="iframe"></div>
+					</div>
+				</div>
+			</div>
+			<div id="asset-pane">
+				<div class="window">
+					<div class="wrapper">
+						<div class="head">Sprite Assets</div>
+						<div class="inner"></div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div id="middle-pane">
-		<div id="canvas-pane">
-			<div class="window">
-				<div class="tab-wrapper">
-					<div class="tab active">Player</div>
-					<div class="tab">Enemy</div>
-					<div class="tab">Monster</div>
-					<div class="tab">Weapon</div>
-					<div class="tab">Bullet</div>
-					<div class="tab">CreatureParent</div>
-				</div>
-				<div class="wrapper"> <!-- style="padding-top: .2rem;" -->
-					<div class="head">+ 100% -</div>
-					<div class="inner" id="iframe"></div>
-				</div>
-			</div>
-		</div>
-		<div id="asset-pane">
+		
+		<div id="right-pane">
 			<div class="window">
 				<div class="wrapper">
-					<div class="head">Sprite Assets</div>
-					<div class="inner"></div>
+				<div class="head">Entity Inspector</div>
+				<div class="inner">
+					<br>
+					<div>Select an Entity to edit</div>
+					<div>- or -</div>
+					<div id="new-entity" class="button">Create New Entity</div>
+					<div id="edit-entity" class="button">Edit Code</div>
+					<div class="button">Add Component</div>
+				</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="right-pane">
-		<div class="window">
-			<div class="wrapper">
-			<div class="head">Entity Inspector</div>
-			<div class="inner">
-				<br>
-				<div>Select an Entity to edit</div>
-				<div>- or -</div>
-				<div id="new-entity" class="button">Create New Entity</div>
-				<div id="edit-entity" class="button">Edit Code</div>
-				<div class="button">Add Component</div>
-			</div>
-			</div>
-		</div>
-	</div>
 
 	</div>
 

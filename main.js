@@ -40,30 +40,51 @@ document.querySelector("#edit-entity").onclick = () => {
   console.log(Game);
 }
 
+/*
+  Download JSON file
+
+  var obj = {a: 123, b: "4 5 6"};
+  var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+
+  var a = document.createElement('a');
+  a.href = 'data:' + data;
+  a.download = 'data.json';
+  a.innerHTML = 'download JSON';
+
+  var container = document.getElementById('container');
+  container.appendChild(a);
+*/
 
 
 
-
-const Preferences = {}
+//IDE
+const Preferences = {} 
 
 const Game = {
   Sprite: {},
   Sound: {},
   Entity: {},
   Level: {},
-  Commponent: {},
+  Module: {}, //aka components
 
-  Options: {},
+  Options: {}, //includes name (project and game)
 }
 
 const SaveLoadManager = {
   save: (name) => {
-    localStorage.setItem(name, "placeholder")
+    localStorage.setItem(name, JSON.stringify(Game))
     console.log(`Saving ${name}`);
   },
   load: (name) => {
-    let loaded = localStorage.getItem(name)
+    let loaded = JSON.parse(localStorage.getItem(name))
     console.log(`Loading ${name} and its content is ${loaded}`);
+    //console.log(loaded.Sprite.sprBulletHAR);
+  },
+  import: () => {
+
+  },
+  export: () => {
+
   },
   delete: (name) => {
     localStorage.removeItem(name)
@@ -71,9 +92,6 @@ const SaveLoadManager = {
   },
   showAll: () => {
     console.log(Object.entries(localStorage))
-    /*for (let key in localStorage) {
-      console.log(key);
-    }*/
   }
 }
 
@@ -112,7 +130,8 @@ const Compiler = {
     //load maps here
 
     src += "\n" + GameFragment
-    return src
+
+    return src //returns javascript code of the game
   },
   spriteAssembler: placeholderSpriteAssemler,
   entityAssembler: placeholderEntityAssemler,
@@ -336,8 +355,9 @@ Game.Sprite.sprBulletHAR = sprBulletHeavyArHolder
 Game.Entity.Player = playerplace
 
 
-//console.log(Compiler.compile());
+console.log(Compiler.compile());
 
+/*
 SaveLoadManager.save("HOLOHOKOMON")
 SaveLoadManager.save("HOL")
 SaveLoadManager.save("bajla")
@@ -346,6 +366,10 @@ SaveLoadManager.showAll()
 
 SaveLoadManager.load("HOL")
 
+SaveLoadManager.delete("HOL")
+
+SaveLoadManager.showAll()
+*/
 
 /*
 let scroll = 100
