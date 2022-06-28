@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
 	<link rel="stylesheet" href="main.css">
 	<script src="main.js" type="module"></script>
 	<title>WebSource IDE</title>
@@ -12,36 +11,8 @@
 <body> <!-- oncontextmenu="return false" -->
 
 	<div id="top-pane">
-		<div id="ico" class="icon">
-			<img src="/Icons/new.svg" width="32px" height="32px" draggable="false" />
-		</div>
-		<div id="ico" class="icon">
-			<img src="/Icons/save.svg" width="32px" height="32px" draggable="false" />
-		</div>
-		<div id="ico" class="icon">
-			<img src="/Icons/load.svg" width="32px" height="32px" draggable="false" />
-		</div>
-		<div id="ico" class="icon">
-			<img src="/Icons/export.svg" width="32px" height="32px" draggable="false" />
-		</div>
-
-		<div style="margin: 0 2rem;"></div>
-
-		<div id="ico-play" class="icon">
-			<img src="/Icons/play.svg" width="32px" height="32px" draggable="false" />
-		</div>
-		<div id="ico" class="icon">
-			<img src="/Icons/stop.svg" width="32px" height="32px" draggable="false" />
-		</div>
-		<div id="ico" class="icon">
-			<img src="/Icons/settings.svg" width="32px" height="32px" draggable="false" />
-		</div>
-		<div id="ico" class="icon">
-			<img src="/Icons/preferences.svg" width="32px" height="32px" draggable="false" />
-		</div>
-
-		<div style="margin: 0 2rem;"></div>
-
+		<div id="ico-play" class="icon">PLY</div>
+    <div class="button">Click PLY Button also Check Console</div>
 	</div>
 
 	<div id="bottom-pane">
@@ -81,7 +52,7 @@
 						<div class="tab">CreatureParent</div>
 					</div>
 					<div class="wrapper"> <!-- style="padding-top: .2rem;" -->
-						<div class="head">+ 100% -</div>
+						<div class="head">100%</div>
 						<div class="inner" id="iframe"></div>
 					</div>
 				</div>
@@ -128,9 +99,7 @@
 		<div class="window" style="width: 90vw; height: 90vh;">
 			<div class="wrapper">
 				<div class="head">
-					<div id="ico-stop" class="icon">
-						<img src="/Icons/stop.svg" width="32px" height="32px" draggable="false" />
-					</div>
+					<div id="ico-stop" class="icon">CLS</div>
 				</div>
 				<div id="modal" class="inner"></div>
 			</div>
