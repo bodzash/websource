@@ -4,8 +4,8 @@ const ctx = canvas.getContext("2d")
 
 ctx.imageSmoothingEnabled = false;
 
-canvas.width = 320 //320
-canvas.height = 240 //240
+//canvas.width = 320 //320
+//canvas.height = 240 //240
 
 let ratioX = .5
 let ratioY = .5
