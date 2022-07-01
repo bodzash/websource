@@ -16,7 +16,7 @@ function runGameInBrower() {
 	iframe.height = "100%"
 	const html =
 	`<body style="padding: 0; margin: 0; overflow: hidden; box-sizing: border-box;" > 
-			<canvas id="canvas" style="background: rgb(77, 77, 77); image-rendering: pixelated" oncontextmenu="return false";></canvas> 
+			<canvas width="320" height="240" id="canvas" style="background: rgb(77, 77, 77); image-rendering: pixelated" oncontextmenu="return false";></canvas> 
       <script type="module">
         ${script}
       </script>
